@@ -13,7 +13,7 @@ pipeline {
                 // // sh 'apt install python3.11-venv'
                 // sh 'python3 -m venv venv'
                 // sh '. venv/bin/activate && pip install -r requirements.txt'
-                sh ' pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt --break-system-packages'
 
             }
         }
