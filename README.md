@@ -17,4 +17,13 @@ docker run -d \
 
   docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
-  d0ff02f5e6c04edbade8b6bba17915c9
+  a68cb3720b2a4f1c9bc522bbaac0dbc0
+
+  docker build -t jenkins-python-selenium .
+
+
+apt-get install -y python3 python3-pip
+
+apt-get update && apt-get install -y \
+    chromium chromium-driver curl unzip git \
+    && pip install selenium pytest
