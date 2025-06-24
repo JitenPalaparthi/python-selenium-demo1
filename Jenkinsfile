@@ -10,15 +10,18 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'apt install python3.11-venv'
-                sh 'python3 -m venv venv'
-                sh '. venv/bin/activate && pip install -r requirements.txt'
+                // // sh 'apt install python3.11-venv'
+                // sh 'python3 -m venv venv'
+                // sh '. venv/bin/activate && pip install -r requirements.txt'
+                sh ' pip install -r requirements.txt'
+
             }
         }
 
         stage('Run Selenium Tests') {
             steps {
-                sh '. venv/bin/activate && python -m unittest tests/test_text_box.py -v'
+                // sh '. venv/bin/activate && python -m unittest tests/test_text_box.py -v'
+                sh 'python -m unittest tests/test_text_box.py -v'
             }
         }
     }
