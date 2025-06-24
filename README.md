@@ -21,6 +21,7 @@ docker run -d \
 
   docker build -t jenkins-python-selenium .
 
+pip install -r requirements.txt --break-system-packages
 
 apt-get install -y python3 python3-pip
 
